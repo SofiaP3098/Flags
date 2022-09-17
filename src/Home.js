@@ -1,7 +1,8 @@
-import { Container, Grid, Card, CardMedia, CardContent } from "@mui/material"
+import { Container, Grid, Card, CardMedia, CardContent, Button } from "@mui/material"
 import { useEffect, useState } from "react";
 import PokemonDetail from "./pokemonDetail";
 import { getDataFromPokemon } from "./services";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     const imgUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/"
@@ -29,12 +30,17 @@ const Home = () => {
             <Grid container spacing={4}>
                 {pokemons.length > 0 &&
                     pokemons.map((pokemon, index) =>
-                        <Grid item md={4} sm={5} xs={5}>
+                        <Grid item md={4} sm={12} xs={12}>
                             <Card className="card-pokemon">
                                 <CardMedia component="img" className="img-pokemon" image={`${imgUrl}${index + 1}.svg`} />
                                 <CardContent className="center">
                                     <h3 className="name-pokemon">{pokemon.name}</h3>
                                     <PokemonDetail pepito={pokemon.name} url={pokemon.url}/>
+                                    <Link to ="/banderas"> <Button variant="contained">prueba</Button> </Link>
+                                    
+                                    
+                                    
+                                    
                                 </CardContent>
                             </Card>
                         </Grid>

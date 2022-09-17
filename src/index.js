@@ -6,11 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import Git from './PracticaGit';
 import Home from './Home';
 import Flags from './Flags';
-
+import Detail from './Detail';
+import Router from "../src/router"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Flags />
+    <Router/>
   </React.StrictMode>
 );
 
