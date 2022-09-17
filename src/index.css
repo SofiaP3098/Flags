@@ -12,9 +12,6 @@ code {
     monospace;
 }
 
-.container{
-  align-items: center;
-}
 
 .center{
   text-align: center;
@@ -30,8 +27,10 @@ code {
   min-height: 250px;
   max-height: 250px;
   object-fit: contain !important;
+
 }
 
 .name-pokemon{
-  color: black;
+  text-transform: uppercase;
+  text-align: center;
 }

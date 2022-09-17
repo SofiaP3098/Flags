@@ -16,6 +16,7 @@ import { getDataFromPokemon } from '../services';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { width } from '@mui/system';
 
 const Detail = () => {
     const { name } = useParams();
@@ -35,7 +36,7 @@ const Detail = () => {
 
     return (        
         <Container>
-        <Button variant ="contained" onClick={()=>history(-1)}>BACK</Button>        
+        <Button  onClick={()=>history(-1)} >BACK</Button>        
             {
                 Object.keys(countryData).length > 0 && (
                     <div>

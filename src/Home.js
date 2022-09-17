@@ -35,10 +35,9 @@ const Home = () => {
                                 <CardMedia component="img" className="img-pokemon" image={`${imgUrl}${index + 1}.svg`} />
                                 <CardContent className="center">
                                     <h3 className="name-pokemon">{pokemon.name}</h3>
-                                    <PokemonDetail pepito={pokemon.name} url={pokemon.url}/>
                                     <Link to ="/banderas"> <Button variant="contained">prueba</Button> </Link>
                                     
-                                    
+                                    <PokemonDetail pepito={pokemon.name} url={pokemon.url}/>
                                     
                                     
                                 </CardContent>

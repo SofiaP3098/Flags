@@ -8,14 +8,17 @@ import {
   MenuItem,
   Card,
   CardMedia,
-  CardContent, CircularProgress,
+  CardContent, CircularProgress,Button
 } from "@mui/material";
 import { useEffect, useState } from "react";
 import { getDataFromPokemon } from "../services";
 import FlagDetail from "./Details";
 import {Link} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 const Flags = () => {
+  const history = useNavigate();
+
   const [countries, setCountries] = useState([]);
 
   const [region, setRegion] = useState("");
@@ -69,6 +72,7 @@ const Flags = () => {
 
   return (
     <Container>
+      <Button variant="contained" onClick={()=>history(-1)} >BACK</Button>     
       <Grid container spacing={3} mt={5}>
         <Grid item md={6}>
           <TextField
